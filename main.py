@@ -44,7 +44,7 @@ links = [
     "https://proxy69.vercel.app/proxy?url="
 ]
  
-comids=['205677143','75300990']
+comids=['205677143']
  
 list_com=cycle(comids)
  
@@ -208,37 +208,37 @@ def login_custom(email: str, secret: str):
  
  
  
-def join_com(sid,m,comId):
-        try:
-            data = {"timestamp": int(timestamp() * 1000)}
-            data = json.dumps(data)
+#def join_com(sid,m,comId):
+        #try:
+            #data = {"timestamp": int(timestamp() * 1000)}
+            #data = json.dumps(data)
             
-            response = requests.post(f"{next(logins)}{api}/x{comId}/s/community/join", data=data, headers=get_headers(sid,data))
-            if response.status_code==200:
-                resp=json.loads(response.text)
-                if resp['api:message']=='OK':
-                        print(f'joined community: {m}')
-                        return True
-                else: return False
-            elif response.status_code==403:
-                return join_com(sid,m,comId)
-            else:
+            #response = requests.post(f"{next(logins)}{api}/x{comId}/s/community/join", data=data, headers=get_headers(sid,data))
+            #if response.status_code==200:
+                #resp=json.loads(response.text)
+                #if resp['api:message']=='OK':
+                        #print(f'joined community: {m}')
+                        #return True
+                #else: return False
+            #elif response.status_code==403:
+                #return join_com(sid,m,comId)
+            #else:
                 #  print(json.loads(response.text)["api:message"])
-                 return False
+                 #return False
                 # comid.clear()
                 # comid.append("52193277")
                 # join_com(sid,comid[0])
             
-        except:
-              return join_com(sid,m,comId)
+        #except:
+              #return join_com(sid,m,comId)
  
-def leave_com(sid, m,comId):
+#def leave_com(sid, m,comId):
         
-        response = requests.post(f"{next(logins)}{api}/x{comId}/s/community/leave", headers=get_headers(sid))
-        if response.status_code != 200: 
-            return True
-        else:
-            return leave_com(sid,m,comId)
+        #response = requests.post(f"{next(logins)}{api}/x{comId}/s/community/leave", headers=get_headers(sid))
+        #if response.status_code != 200: 
+            #return True
+        #else:
+            # return leave_com(sid,m,comId)
  
  
 def magic_num():
@@ -282,10 +282,10 @@ def gen_1(account):
                     id_com=get_com()
                     
                     
-                    com=join_com(sid,m,id_com)
-                    if com:
+                    #com=join_com(sid,m,id_com)
+                    #if com:
                             
-                            for i in range(1,25,1):
+                    for i in range(1,24,1):
                                 gen(sid,i,m,id_com)
                                 sleep(1)
                             #leave_com(sid,m,id_com)
