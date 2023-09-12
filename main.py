@@ -26,8 +26,8 @@ import sys
 #sys.stdout.reconfigure(encoding='utf-8')
 from itertools import cycle
  
-THIS_FOLDER = path.dirname(path.abspath(__file__))
-account_file = path.join(THIS_FOLDER, "ids2.json")
+THIS_FOLDER = path.dirname(path.abspath(_file_))
+account_file = path.join(THIS_FOLDER, "teddy2.json")
 secrets=[]
  
 with open(account_file) as file:
@@ -297,4 +297,4 @@ def gen_1(account):
  
  
 for em in secrets:
-      gen_1(em)
+      gen_1(em)
