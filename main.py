@@ -285,7 +285,7 @@ def gen_1(account):
                     #com=join_com(sid,m,id_com)
                     #if com:
                             
-                    for i in range(1,24,1):
+                    for i in range(1,22,1):
                                 gen(sid,i,m,id_com)
                                 sleep(1)
                             #leave_com(sid,m,id_com)
