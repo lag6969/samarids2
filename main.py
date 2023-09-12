@@ -27,7 +27,7 @@ import sys
 from itertools import cycle
  
 THIS_FOLDER = path.dirname(path.abspath(_file_))
-account_file = path.join(THIS_FOLDER, "teddy2.json")
+account_file = path.join(THIS_FOLDER, "ids2.json")
 secrets=[]
  
 with open(account_file) as file:
